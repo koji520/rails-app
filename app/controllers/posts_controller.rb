@@ -3,6 +3,11 @@ class PostsController < ApplicationController
     @posts = Post.all
   end
 
+  def all
+    @posts = Post.all
+    render json: @posts
+  end
+
   def new
     @post = Post.new
   end
