@@ -1,6 +1,6 @@
 h1
   | HELLO
-a href="/posts/new"
+a href=new_post_path
   | 新規投稿
 ul
   - @posts.each do |post|
@@ -9,5 +9,5 @@ ul
         = post.title
       p
         = post.content
-      a href="/posts/#{post.id}/edit"
+      a href=edit_post_path(post)
         | 編集
